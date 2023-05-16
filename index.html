@@ -5,20 +5,147 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personal Portfolio Website - Zybren Carbonilla</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <div id="header">
   <div class="container">
     <nav>
       <img src="images/logo.png" class="logo">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Potfolio</a></li>
-        <li><a href="#">Contact</a></li>
+      <ul id="sidemenu">
+        <li><a href="#header">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Potfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <i class="fas fa-times" onclick="closemenu()"></i>
+      </ul>
+      <i class="fas fa-bars" onclick="openmenu()"></i>
+    </nav>
+    <div class="header-text">
+      <p>Web Developer</p>
+      <h1>Hi, I'm Zybren<br>Carbonilla from PH</h1>
+    </div>
   </div>
-  
+</div>
+<div id="about">
+  <div class="container">
+    <div class="row">
+      <div class="about-col-1">
+        <img src="images/user.png">
+      </div>
+      <div class="about-col-2">
+        <h1 class="sub-title">About Me</h1>
+        <p>Lorem ipsum,dolor sit amet.Lorem ipsum,dolor sit ametLorem ipsum,dolor sit ametLorem ipsum,dolor sit ametLorem ipsum,dolor sit ametLorem ipsum,dolor sit ametLorem ipsum,dolor sit ametLorem ipsum,dolor sit ametLorem ipsum,dolor sit ametLorem ipsum,dolor sit ametLorem ipsum,dolor sit amet</p>
+        
+        <div class="tab-titles">
+          <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+          <p class="tab-links" onclick="opentab('experience')">Experience</p>
+          <p class="tab-links" onclick="opentab('education')">Education</p>
+        </div>
+        <div class="tab-contents active-tab" id="skills">
+          <ul>
+            <li><span>Web Development</span><br>Web app Development</li>
+            <li><span>UI/UX</span><br>Web Design</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="experience">
+          <ul>
+            <li><span>2021 - Current</span><br>Freelance Web Developer/Designer</li>
+            <li><span>2020 - 2021</span><br>Executive VA at Codes&Clicks</li>
+            <li><span>2019 - 2020</span><br>Freelance</li>
+            <li><span>2016 - 2018</span><br>Admin at Ejadah, UAE</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="education">
+          <ul>
+            <li><span>2023</span><br>Zuitt Bootcamp</li>
+            <li><span>2014</span><br>BSIT - CIC</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- -------------services------------- -->
+<div id="services">
+  <div class="container">
+    <h1 class="sub-title">My Services</h1>
+    <div class="services-list">
+      <div>
+        <h2>Web Design</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum repudiandae illum, nesciunt labore rerum enim modi consequuntur reiciendis porro velit minus temporibus saepe? Dicta, officia. Quod ex dolore enim accusantium.</p>
+        <a href="#">learn more</a>
+      </div>
+      <div>
+        <h2>Web Development</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum repudiandae illum, nesciunt labore rerum enim modi consequuntur reiciendis porro velit minus temporibus saepe? Dicta, officia. Quod ex dolore enim accusantium.</p>
+        <a href="#">learn more</a>
+      </div>
+      <div>
+        <h2>Web Hosting & Domain</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum repudiandae illum, nesciunt labore rerum enim modi consequuntur reiciendis porro velit minus temporibus saepe? Dicta, officia. Quod ex dolore enim accusantium.</p>
+        <a href="#">learn more</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ----------portfolio---------------- -->
+<div id="Portfolio">
+  <div class="container">
+    <h1 class="sub-title">My Work</h1>
+    <div class="work-list">
+      <div class="work">
+        <img src="images/work-1.png">
+      </div>
+      <div class="work">
+        <img src="images/work-2.png">
+      </div>
+      <div class="work">
+        <img src="images/work-3.png">
+        <div class="layer">
+          <h3>Online Shopping App</h3>
+          <p>The app connects you to the talented people around the world</p>
+          <a href="#"><i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="btn">See more</a>
+  </div>
+</div>
+
+<!-- ----------contact-------------- -->
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="row">Contact Me</h1>
+        <p><i class="fas fa-paper-plane"></i>zycarbonilla@gmail.com</p>
+        <p><i class="fas-fa-phone-square-alt"></i>09655729788</p>
+        <div class="social-icons">
+          <a href="https://facebook.com/zycarbonilla"><i class="fab fa=facebook"></a>
+          <a href="https://twitter.com/zycarbonilla"><i class="fab fa-twitter-square"></a>
+          <a href="https://instagram.com/zycarbonilla"><i class="fab fa-instagram"></a>
+          <a href="https://linkedin.com/in/zycarbonilla"><i class="fab fa-linkedin"></a>
+        </div>
+        <a href="images/my-cv.pdf" class="btn btn2">Download Resume/CV</a>
+      </div>
+      <div class="contact-right">
+        <form>
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="Mesage" rows="6" placeholder="Your Mesasge"></textarea>
+          <button type="submit">Submit</button>
+        </form>
+    </div>
+  </div>
+</div>
+<div class="copyright">
+  <p>Copyright © Zycarbonilla. Made with <i class="fas fa-heart"></i></p>
+</div>
+
+<script type="text/Javascript" src="./script.js"></script>
 </body>
 </html>
